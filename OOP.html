@@ -1,0 +1,51 @@
+<!-- code more modular and reusable,Well organised code,Easier to debug,
+Best is medium to large website. -->
+<!-- class ke under method ko object bana ke use kiya jata hai. -->
+<!-- An Object is a unique entity that contains property and methods. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Oriented Programing</title>
+</head>
+<script>
+    class hello{
+        message(){
+            console.log("Hello everyone");
+        }
+        sorry(){
+            console.log("sorry everyone");
+        }
+    }
+    let a=new hello;
+
+    a.message();
+    a.sorry();
+
+
+   class student{
+    constructor(name,age){
+        this.studentname=name;
+        this.studentage=age;
+        console.log('constructor function is called itself');
+    }
+    kajal(){
+       console.log(`call ${this.studentname} his age is ${this.studentage} year old`) ;
+
+    }
+    static staticMethod(){
+        console.log('for static method object is not created.');
+        document.write('for static method object is not created. this is directly called');
+    }
+}
+let c=new student('YAHOO BABA',30);
+c.kajal();
+student.staticMethod();
+
+</script>
+<body>
+<h1>within the class methods are used by an object.</h1>  
+</body>
+</html>

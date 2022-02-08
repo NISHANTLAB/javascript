@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    let user =['Pnaday ji',28,'Delhi',['Male',100000]];
+    let [name,age,city, [gender,salary]]=user;
+
+    console.log(name);
+    
+    console.log(city);
+    console.log(age);
+    console.log(gender);
+    console.log(salary);
+
+
+    // function learn([name,age=27,city]){
+    //     console.log(name);
+    //     console.log(age);
+    //     console.log(city);
+    // }
+    // learn(['Nishant Singh',28,'Mohania']);
+
+    //we can write in this way also:-
+
+ function learn(){
+     return ['Nishant Singh',28,'Mohania'];
+        
+    }
+   let [aname,aage,acity] =learn();
+   console.log(acity);
+
+
+   //It is used in object also:-using allies we can short our code also.
+   let khushi={
+       playing:'cricket',
+       qual:'matriculation',
+       bat:'MRF'
+   }
+   let {playing:p,qual:q,bat:r}=khushi;
+   console.log(p);
+   console.log(q);
+   console.log(r);
+</script>
+<body>
+    
+</body>
+</html>

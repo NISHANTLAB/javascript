@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    let name='Nishant singh';
+    let course='Btech';
+    var obj={
+        name,
+        course
+    }
+    console.log(obj);
+
+
+    let n='Student';
+    var obj={
+        [n+'name']:'Yaaho Baba',
+        course:'Btech',
+        // detail:function(){
+        //     return `${this.Studentname} is student of ${this.course}`
+        // }
+
+       //according to es6 version function declaration is short:
+
+       detail(){
+            return `${this.Studentname} is student of ${this.course}`
+        }
+    };
+    // console.log(obj);
+    // console.log(obj.detail());
+    console.log(obj);
+    console.log(obj['detail']());
+
+
+    let fname='Bhanu pratap';
+    let lcourse='MCA';
+    let food='mutton';
+    function student(fname,lcourse,food){
+        // instead of concatination we use backtik also
+        // let fullname=fname+" "+lcourse;
+      let  fullname=`${fname} ${lcourse}`
+        return {fullname,food};
+    }
+console.log(student(fname,lcourse,food));
+
+//if we see the property of the object then use this way:-
+let s=student(fname,lcourse,food);
+console.log(s.food);
+console.log(s.fullname);
+</script>
+<body>
+    
+</body>
+</html>

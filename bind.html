@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>  
+    var pokemon = {
+    firstname: 'Nishant',
+    lastname:  'Singh',
+    getPokeName: function() {
+        var fullname = this.firstname + ' ' + this.lastname;
+        return fullname;
+    }
+};
+
+var pokemonName = function() {
+    console.log(this.getPokeName() + 'I choose you!');
+};
+
+var logPokemon = pokemonName.bind(pokemon); // creates new object and binds pokemon. 'this' of pokemon === pokemon now
+
+logPokemon(); // 'Pika Chu I choose you!'
+
+
+// The bind method creates a copy of the function and sets the this keyword, while the call and apply methods
+//  sets the this keyword and calls the function immediately.
+
+
+//  Call() and Apply() method:-
+//The apply() method is similar to call(). The difference is that the apply() method accepts an array of
+// arguments instead of comma separated values.
+
+var pokemon = {
+    firstname: 'BHANU',
+    lastname: 'Singh',
+    getPokeName: function() {
+        var fullname = this.firstname + ' ' + this.lastname;
+        return fullname;
+    }
+};
+
+var pokemonName = function(snack, hobby) {
+    console.log(this.getPokeName() + ' loves ' + snack + ' and ' + hobby);
+};
+
+pokemonName.call(pokemon,'sushi', 'algorithms'); // bhanu singh  loves sushi and algorithms
+pokemonName.apply(pokemon,['sushi', 'algorithms']); // bhanu singh  loves sushi and algorithms
+</script>
+</body>
+</html>

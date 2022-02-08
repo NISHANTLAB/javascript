@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let id1 =Symbol("HELLO");
+        let id2 =Symbol("HELLO");
+        console.log(id1==id2);
+
+        let str1 ="HELLO";
+        let str2 ="HELLO";
+        console.log(str1==str2);
+
+
+  // convert Symbol to String:-by using toString method
+  let id = Symbol("HELLO");
+  console.log(id);
+//   alert(id.toString());
+//   alert(id.description); 
+  console.log(id.description);
+
+//HOW TO USE SYMBOL IN OBJECT:-
+let age =Symbol("age");
+let user ={
+    name:"NISHANT SINGH",
+    class:"BTECH",
+    // [age]:28
+};
+
+user[age]=28;
+user["Gender"] ="Male";
+console.log(user);
+console.log(JSON.stringify(user));
+
+// for(let key in user){
+//     console.log(key);
+// }
+
+
+// console.log(user.name);
+// console.log(user[age]);
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,38 @@
+ <!-- The rest parameter syntax allows a function to accept an indefinite number of arguments as an array, -->
+ <!-- The arguments object is not a real array, while rest parameters are Array instances, meaning methods like sort, 
+ map, forEach or pop can be applied on it directly;
+ The arguments object has additional functionality specific to itself (like the callee property).
+ The ...restParam bundles all the extra parameters into a single array, therefore it does not contain any named
+  argument defined before the ...restParam. Whereas the arguments object contains all of the parameters --
+   including all of the stuff in the ...restParam -- unbundled. -->
+   <!-- REST operator: symbol is ...(tripal dots).it sepetate the string value and numeric value also,and this is in last. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function sum(name,course,...argument){
+        console.log(argument);
+        document.write(`Hello ${name} of  ${course}:`)
+        let sum =0;
+        for(let i in argument){
+            sum+=argument[i];
+
+        }
+        document.write(sum+'<br>');
+    }
+    sum('Yahoo Baba','Btech',90,30,40);
+    sum('Ram kumar','BA',20,30);
+
+// REST PARAMETER:-It is used at this time function is declared with (...arg) .  
+
+
+</script>
+<body>
+    
+</body>
+</html>

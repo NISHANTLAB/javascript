@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function sum(name,course,...argument){
+        console.log(argument);
+        document.write(`Hello ${name} of  ${course}:`)
+        let sum =0;
+        for(let i in argument){
+            sum+=argument[i];
+
+        }
+        document.write(sum+'<br>');
+    }
+    var arr =[90,30,40];
+    sum('Yahoo Baba','Btech',...arr);
+    var arr1=[20,30,40,80];
+    var arr2=[70,90];
+    var arr3 = arr1.concat(arr2);
+    // console.log(arr3);
+    // by using spread operator concatination .
+    var arr3 =[...arr1,...arr2];
+    console.log(arr3);
+    // if we adding more value in array then we add many value by using spread operator
+    var arr3=[33,44,...arr1,...arr2,55,67,68];
+    console.log(arr3);
+
+
+    // spread operator is used in object also:-
+    var obj1={
+        name:'Yahoo Baba',
+        work:'creating programming video'
+    };
+    var obj2={
+         age:30
+    };
+    var obj3={...obj1,...obj2};
+    console.log(obj3);
+
+// SPREAD OPERATOR:-It is used at calling time with (...arg) . its value passed in array .if we dont use 
+// ...dots then all the value in array is consider in one value.
+
+
+</script>
+<body>
+    
+</body>
+</html>

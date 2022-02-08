@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        // let number =[200,300,400,"AKASH"];
+        // let iter =number[Symbol.iterator]();
+        // // console.log(iter.next());
+        // // console.log(iter.next());
+        // // console.log(iter.next());
+        // // console.log(iter.next());
+
+
+        // console.log(iter.next().value);
+        // console.log(iter.next().value);
+        // console.log(iter.next().value);
+        // console.log(iter.next().value);
+        // console.log(iter.next().value);
+
+
+
+
+        let number =[200,300,400,600,700,900,800];
+        let iter =number[Symbol.iterator]();
+        let result = iter.next();
+
+        while(!result.done){
+            console.log(result);
+            result =iter.next();
+        }
+
+        let abc ="YAHOO BABA KAHA HO";
+        for(let char of abc){
+            console.log(char);
+        };
+        
+        
+     //we are creating our own iterator in this way:-
+     function numberIteration(arr){
+        var nextNum=0;
+        return {
+            next(){
+                if(nextNum < arr.length){
+                    return{
+                        value:arr[nextNum++],
+                        done:false
+                    }
+                }else{
+                    return{
+                        done:true
+                    }
+                }
+            }
+        }
+     }   
+      
+    let kaaj =[130,234,456,556,768,888];
+    let num =numberIteration(kaaj);
+    console.log(num.next());
+    console.log(num.next());
+    console.log(num.next());
+    console.log(num.next());
+    console.log(num.next());
+    console.log(num.next());
+    console.log(num.next());
+
+      
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
